@@ -1,0 +1,51 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+backend/.venv/
+
+# Node / Next.js
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build / cache artifacts
+dist/
+build/
+.cache/
+
+# Vector stores and local databases
+backend/.chroma/
+**/.chroma/
+*.sqlite
+*.sqlite3
+
+# Local/generated reports and heavy source documents
+data_sources/manual_reports/
+data_sources/raw_reports/
+*.pdf
+*.docx
+
+# Evaluation outputs
+backend/evals/reports/*.csv
+backend/evals/reports/*.json
+
+# Keep generated markdown knowledge files versionable unless intentionally removed.
+!knowledge_base/**/*.md
