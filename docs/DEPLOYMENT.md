@@ -46,6 +46,7 @@ Health check path: /api/health
 在 Render 的 Environment 页面填：
 
 ```text
+PYTHON_VERSION=3.11.9
 OPENAI_API_KEY=你的真实 OpenAI API key
 OPENAI_BASE_URL=https://api.openai.com/v1
 OPENAI_MODEL=gpt-4o-mini
@@ -58,6 +59,8 @@ CACHE_BACKEND=memory
 ```
 
 `OPENAI_API_KEY` 不要写进 GitHub，只在 Render 后台填。
+
+`PYTHON_VERSION` 很重要。不要让 Render 默认使用 Python 3.14，否则 `pydantic-core` 等依赖可能会尝试本地编译并导致 build 失败。
 
 ### 后端部署后测试
 
